@@ -56,7 +56,7 @@ function Slide() {
           <div>
             <div
               onClick={prevSlide}
-              className=" absolute left-0 top-1/2 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#eff1ff] p-0 leading-[0] text-[#5f77ff] "
+              className=" absolute bottom-[-35px] left-0 top-auto z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent p-0 leading-[0] text-[#5f77ff] md:top-1/2 md:transform-none md:bg-[#eff1ff]  "
             >
               <img src={LeftSlide} alt="Left" />
             </div>
@@ -69,12 +69,12 @@ function Slide() {
 
             <div
               onClick={nextSlide}
-              className=" absolute right-0 top-1/2 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#eff1ff] p-0 leading-[0] text-[#5f77ff]"
+              className=" absolute bottom-[-35px] right-0 top-auto z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent p-0 leading-[0] text-[#5f77ff] md:top-1/2 md:transform-none md:bg-[#eff1ff]"
             >
               <img src={RightSlide} alt="Right" />
             </div>
           </div>
-          <ul className=" absolute bottom-0 left-1/2 m-0 mt-2 flex w-full  -translate-x-1/2 transform items-center justify-center p-0 ">
+          <ul className=" absolute bottom-[-25px] left-1/2  m-0 flex w-full  -translate-x-1/2 transform items-center justify-center p-0 ">
             <li
               onClick={() => setCurrentIndex(0)}
               className="relative mx-1 my-0 inline-block h-5 w-5 cursor-pointer p-0 "
