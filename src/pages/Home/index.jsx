@@ -2,6 +2,7 @@ import Company from '../../components/Company';
 import Hero from '../../components/Hero';
 import Navbar from '../../components/Navbar';
 import Slide from '../../components/Slide';
+import Start from '../../components/Start';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Company />
       <Slide />
+      <Start />
     </div>
   );
 };
