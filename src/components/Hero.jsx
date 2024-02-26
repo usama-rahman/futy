@@ -1,14 +1,15 @@
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
+import Typewriter from 'typewriter-effect';
 
 function Hero() {
   return (
     <section className="block px-6 py-12 md:p-12 ">
       <div className=" relative mx-auto my-0 w-auto flex-grow md:max-w-[1152px] ">
-        <div className="flex">
+        <div className="md:flex">
           {/* Text */}
-          <div className="flex w-[50%] max-w-[550px] flex-col justify-center pr-4 ">
+          <div className="flex  max-w-[550px] flex-col justify-center pr-4 ">
             <div>
-              <a className="shadow-[0 1px 2px 0 rgba(67,67,113,.05)] mb-8 flex cursor-pointer items-center	justify-center rounded-3xl border border-[rgba(41,41,64,.08)] px-4 py-3 text-[1rem] text-[#292940] transition-all delay-200 ease-in-out ">
+              <a className=" mb-8 flex w-[80%] cursor-pointer	 items-center	justify-center rounded-3xl border border-[rgba(41,41,64,.08)] px-4 py-3 text-[1rem] text-[#292940] transition-all delay-200 ease-in-out hover:border-[#5f77ff] hover:shadow-[0_0_0_4px_#dfe4ff] md:w-[70%] ">
                 Futy joins forces with
                 <img
                   src="https://www.leadinfo.com/wp-content/uploads/2021/01/leadinfo-logo.svg"
@@ -25,10 +26,16 @@ function Hero() {
                 <font>Easily convert your website visitors into</font>
               </span>
 
-              <font>
-                <span className="opacity-100 ">|</span>
-              </font>
-              <span className=""></span>
+              <span>
+                <Typewriter
+                  options={{
+                    strings: ['Calls', 'Customers', 'Sales', 'Leads'],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                  }}
+                />
+              </span>
             </h1>
 
             <div className="mt-4 text-lg md:mt-6 md:pr-8  ">
@@ -44,7 +51,7 @@ function Hero() {
             </div>
 
             <div className="mb-0 mt-8 flex flex-wrap items-center justify-start  ">
-              <button className="relative mb-2 mr-2 hidden h-[2.857em] cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-white px-[1.125em] py-1.5 text-center align-top	 font-semibold	leading-normal text-[#5f77ff] hover:bg-[#5f77ff] hover:text-white md:inline-flex ">
+              <button className="relative mb-2 mr-2  h-[2.857em] cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-white px-[1.125em] py-1.5 text-center align-top	 font-semibold	leading-normal text-[#5f77ff] hover:bg-[#5f77ff] hover:text-white md:inline-flex ">
                 Schedule a demo
               </button>
 

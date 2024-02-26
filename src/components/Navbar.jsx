@@ -1,19 +1,22 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import FutyLogo from '../assets/image/futyLogo.svg';
+
+import MenuEnterIcon from '../ui/MenuEnter';
+
 import { RiMenu4Line } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { IoIosArrowUp } from 'react-icons/io';
 
 import { useState } from 'react';
+import MenuExit from '../ui/MenuExit';
 
 function NavCopy() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-
-  const solutionsNav = () => {};
 
   return (
     <>
@@ -23,9 +26,13 @@ function NavCopy() {
           {/* class="container is-widescreen" */}
           <div className="relative mx-auto my-0 flex h-[100%] min-h-[4.375rem] w-auto grow items-stretch justify-between md:flex md:max-w-[1152px] ">
             {/* class="navbar-brand" */}
-            <div className="flex min-h-[4.375rem] shrink-0  items-center text-xl font-semibold md:mr-8 ">
-              Futy
+
+            <div className="ml-4 flex min-h-[4.375rem] shrink-0  items-center text-xl font-semibold md:mr-8 ">
+              <a className="flex items-center md:py-2 md:pl-0 md:pr-3">
+                <img src={FutyLogo} alt="FutyLogo" className="" />
+              </a>
             </div>
+
             {/* navbar-menu */}
             <div className="  flex items-center  justify-between md:flex md:min-h-[4.375rem] md:shrink-0 md:grow md:items-stretch ">
               {/* class="navbar-start" */}
@@ -81,7 +88,7 @@ function NavCopy() {
               </div>
               <div className="mb-2 cursor-pointer pr-3 text-2xl md:hidden ">
                 <span onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                  {isMenuOpen ? <IoClose /> : <RiMenu4Line />}
+                  {isMenuOpen ? <MenuExit /> : <MenuEnterIcon />}
                 </span>
                 {isMenuOpen && <MobNav />}
               </div>
@@ -103,7 +110,7 @@ const MobNav = () => {
   };
 
   return (
-    <div className=" absolute left-0 top-[4.375rem] flex h-screen w-full flex-row">
+    <div className=" absolute left-0 top-[4.375rem] flex h-screen w-full flex-row bg-white">
       <div className=" z-20 w-full pl-3 pt-2 leading-normal	 ">
         <ul className="gap-2">
           <li>
