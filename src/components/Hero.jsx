@@ -7,9 +7,9 @@ function Hero() {
       <div className=" relative mx-auto my-0 w-auto flex-grow md:max-w-[1152px] ">
         <div className="md:flex">
           {/* Text */}
-          <div className="flex  max-w-[550px] flex-col justify-center pr-4 ">
+          <div className="flex max-w-[550px]  flex-col justify-center pr-4 md:w-[60%] lg:w-[50%] ">
             <div>
-              <a className=" mb-8 flex w-[80%] cursor-pointer	 items-center	justify-center rounded-3xl border border-[rgba(41,41,64,.08)] px-4 py-3 text-[1rem] text-[#292940] transition-all delay-200 ease-in-out hover:border-[#5f77ff] hover:shadow-[0_0_0_4px_#dfe4ff] md:w-[70%] ">
+              <a className=" mb-8 flex w-full cursor-pointer items-center justify-center	rounded-3xl border border-[rgba(41,41,64,.08)] px-4 py-3 text-[1rem] text-[#292940] transition-all delay-200 ease-in-out hover:border-[#5f77ff] hover:shadow-[0_0_0_4px_#dfe4ff] sm:w-[80%] md:w-full lg:w-[80%] ">
                 Futy joins forces with
                 <img
                   src="https://www.leadinfo.com/wp-content/uploads/2021/01/leadinfo-logo.svg"

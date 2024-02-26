@@ -10,3 +10,10 @@
 * {
   font-family: nunito;
 }
+
+.gridLogo {
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 55px);
+}
