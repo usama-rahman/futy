@@ -1,6 +1,8 @@
+import Advice from '../../components/Advice';
 import Company from '../../components/Company';
 import Hero from '../../components/Hero';
 import Leadbot from '../../components/Leadbot';
+import MoreLeads from '../../components/MoreLeads';
 import Navbar from '../../components/Navbar';
 import Slide from '../../components/Slide';
 import Start from '../../components/Start';
@@ -14,6 +16,8 @@ const Home = () => {
       <Slide />
       <Start />
       <Leadbot />
+      <MoreLeads />
+      <Advice />
     </div>
   );
 };
