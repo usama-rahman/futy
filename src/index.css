@@ -31,6 +31,13 @@
   grid-area: showcase;
 }
 
+.reviewSection {
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjUwIiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMjgzMiAyNTAiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDI1MGgyODMyQzEyNjcuOTQgMjUwIDAgMCAwIDB2MjUweiIvPjwvc3ZnPg=='),
+    linear-gradient(180deg, hsla(0, 0%, 100%, 0), #f7f8ff 65%, #f7f8ff);
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+}
+
 @media only screen and (min-width: 769px) {
   .slideGrid {
     grid-template-areas:
