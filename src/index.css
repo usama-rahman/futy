@@ -17,3 +17,32 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 55px);
 }
+
+.slideGrid {
+  grid-template-areas:
+    'meta'
+    'showcase'
+    'actions';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.showcaseGrid {
+  grid-area: showcase;
+}
+
+@media only screen and (min-width: 769px) {
+  .slideGrid {
+    grid-template-areas:
+      'showcase'
+      'meta'
+      'actions';
+    grid-template-rows: 1fr 1fr auto;
+  }
+
+  .showcaseGrid {
+    border-radius: 10px 10px 0 0;
+    height: calc(2rem + 300px);
+    min-height: calc(2rem + 300px);
+  }
+}
