@@ -1,6 +1,7 @@
 import Advice from '../../components/Advice';
 import CallToAction from '../../components/CallToAction';
 import Company from '../../components/Company';
+import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';
 import Leadbot from '../../components/Leadbot';
 import MoreLeads from '../../components/MoreLeads';
@@ -22,6 +23,7 @@ const Home = () => {
       <Advice />
       <Review />
       <CallToAction />
+      <Footer />
     </div>
   );
 };

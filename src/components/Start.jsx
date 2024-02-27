@@ -1,4 +1,5 @@
 import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 
 function Start() {
   return (
@@ -10,7 +11,7 @@ function Start() {
           </h2>
         </div>
 
-        <div className=" mt-8 grid grid-rows-[auto]  gap-[2.5rem]	md:grid-cols-[repeat(3,320px)] md:justify-center md:justify-items-center md:gap-3  ">
+        <div className=" mt-8 flex flex-col md:justify-center md:justify-items-center md:gap-3 lg:flex-row  ">
           <div className=" relative w-full ">
             <div className=" flex items-center rounded-full border border-[#f4f4f5] bg-white px-[10px] py-2 shadow-xl transition-all delay-100 ease-in-out">
               <div className=" flex h-16 min-h-16 w-16 min-w-16 items-center justify-center rounded-full bg-[rgba(111,86,229)] bg-opacity-20 text-[rgba(117,86,229)]  ">
@@ -25,6 +26,11 @@ function Start() {
             </div>
           </div>
 
+          <div className=" flex items-center justify-center py-3 text-[#5f77ff] lg:py-0">
+            <FaArrowRight className="hidden lg:block " />
+            <FaArrowDown className="lg:hidden " />
+          </div>
+
           <div className=" relative w-full ">
             <div className=" flex items-center rounded-full border border-[#f4f4f5] bg-white px-[10px] py-2 shadow-xl transition-all delay-100 ease-in-out">
               <div className=" flex h-16 min-h-16 w-16 min-w-16 items-center justify-center rounded-full bg-[rgba(66,189,221)] bg-opacity-20 text-[rgba(66,189,221)]  ">
@@ -37,10 +43,11 @@ function Start() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className=" absolute left-[-12px] top-10 text-[#5f77ff] ">
-              <FaArrowRight />
-            </div>
+          <div className="flex items-center justify-center py-3 text-[#5f77ff] lg:py-0">
+            <FaArrowRight className="hidden lg:block " />
+            <FaArrowDown className="lg:hidden " />
           </div>
 
           <div className=" relative w-full ">
@@ -54,10 +61,6 @@ function Start() {
                   <p> Receive more Leads</p>
                 </div>
               </div>
-            </div>
-
-            <div className="absolute left-[-12px] top-10 text-[#5f77ff]">
-              <FaArrowRight />
             </div>
           </div>
         </div>
