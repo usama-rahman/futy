@@ -45,4 +45,10 @@
     height: calc(2rem + 300px);
     min-height: calc(2rem + 300px);
   }
+
+  .activeBox {
+    background-position:
+      left 0 top 0,
+      right 0 bottom 0;
+  }
 }
