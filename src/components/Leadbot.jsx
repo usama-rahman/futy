@@ -67,11 +67,7 @@ function Leadbot() {
 
     setCurrentIndex(newSlide);
 
-    // const isNextFirstSlide = nextIndex === 0;
-    // const newNextSlide = isNextFirstSlide
-    //   ? data.length - 1
-    //   : isNextFirstSlide - 1;
-
+ 
     const newNextSlide = nextIndex === 0 ? data.length - 1 : nextIndex - 1;
 
     setNextIndex(newNextSlide);

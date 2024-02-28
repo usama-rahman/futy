@@ -5,8 +5,6 @@ import FutyLogo from '../assets/image/futyLogo.svg';
 
 import MenuEnterIcon from '../ui/MenuEnter';
 
-import { RiMenu4Line } from 'react-icons/ri';
-import { IoClose } from 'react-icons/io5';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { IoIosArrowUp } from 'react-icons/io';
 
@@ -22,10 +20,10 @@ function NavCopy() {
     <>
       <header className="block min-h-[4.375rem]">
         {/* navbar */}
-        <div className=" fixed left-0 right-0 top-0 z-30 flex items-stretch bg-white shadow-sm md:min-h-[4.375rem] md:px-[1.5rem] ">
-          {/* class="container is-widescreen" */}
+        <div className="  left-0 right-0 top-0 z-30 flex items-stretch bg-white shadow-sm md:min-h-[4.375rem] md:px-[1.5rem]  fixed">
+         
           <div className="relative mx-auto my-0 flex h-[100%] min-h-[4.375rem] w-auto grow items-stretch justify-between md:flex md:max-w-[1152px] ">
-            {/* class="navbar-brand" */}
+          
 
             <div className="ml-4 flex min-h-[4.375rem] shrink-0  items-center text-xl font-semibold md:mr-8 ">
               <a className="flex items-center md:py-2 md:pl-0 md:pr-3">
@@ -33,11 +31,11 @@ function NavCopy() {
               </a>
             </div>
 
-            {/* navbar-menu */}
+           
             <div className="  flex items-center  justify-between md:flex md:min-h-[4.375rem] md:shrink-0 md:grow md:items-stretch ">
-              {/* class="navbar-start" */}
+              
               <div className=" hidden flex-col md:mr-auto md:flex md:flex-row md:items-stretch md:justify-start ">
-                {/* class="navbar-item nuxt-link-exact-active nuxt-link-active" */}
+               
                 <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300	ease-in hover:text-[#5f77ff] md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
                   Home
                 </a>
@@ -47,13 +45,13 @@ function NavCopy() {
                 <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
                   Home
                 </a>
-                {/* class="navbar-item navbar-dropdown is-open" */}
+                
                 <div
                   onMouseEnter={() => setIsSolutionsOpen(true)}
                   onMouseLeave={() => setIsSolutionsOpen(false)}
                   className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in 	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  "
                 >
-                  {/* class="navbar-link" */}
+              
                   <div className="flex cursor-pointer ">
                     <span className="hover:text-[#5f77ff]">Solutions</span>
                     <span className="flex items-center">
@@ -64,19 +62,19 @@ function NavCopy() {
                 </div>
 
                 <div className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  ">
-                  {/* class="navbar-link" */}
+                
                   <div className="flex cursor-pointer ">
                     Blog
                     <span className="flex items-center">
                       <MdOutlineKeyboardArrowDown />
                     </span>
                   </div>
-                  {/* class="arrow" */}
+                  
                 </div>
               </div>
-              {/*  class="navbar-end" */}
+             
               <div className="md:flex-end md:ml-auto md:flex md:items-stretch">
-                {/* class="buttons" */}
+               
                 <div className="flex flex-1 items-center justify-end px-3 py-2 md:flex-wrap md:justify-start ">
                   <a className="relative mb-2 mr-2 hidden h-[2.857em] cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-white px-[1.125em] py-1.5 text-center align-top	text-[.875rem] font-semibold	leading-normal text-[#5f77ff] hover:bg-[#5f77ff] hover:text-white md:inline-flex ">
                     login
