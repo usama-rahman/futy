@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const MobNav = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -22,14 +23,14 @@ const MobNav = () => {
       <div className=" z-20  w-full pl-3 pt-2 leading-normal	 ">
         <ul className="gap-2">
           <li className=" relative px-5 py-2 text-[1.5rem] font-semibold text-[#292940] ">
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className=" relative px-5 py-2 text-[1.5rem] font-semibold text-[#292940] ">
             <a href="">Product</a>
           </li>
 
           <li className=" relative px-5 py-2 text-[1.5rem] font-semibold text-[#292940] ">
-            <a href="">Price</a>
+            <Link to="price">Price</Link>
           </li>
 
           <li
