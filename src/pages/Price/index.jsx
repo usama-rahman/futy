@@ -13,6 +13,7 @@ import Review from '../../components/Review';
 import Slide from '../../components/Slide';
 import Start from '../../components/Start';
 import MobNav from '../../ui/MobNav';
+import Pricing from '../../components/Pricing';
 
 function PricePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,13 @@ function PricePage() {
   return (
     <div className=" h-[100%] min-h-screen  ">
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      {isMenuOpen ? <MobNav /> : <></>}
+      {isMenuOpen ? (
+        <MobNav />
+      ) : (
+        <>
+          <Pricing />
+        </>
+      )}
     </div>
   );
 }
