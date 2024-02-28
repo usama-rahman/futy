@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Advice from '../../components/Advice';
 import CallToAction from '../../components/CallToAction';
 import Company from '../../components/Company';
@@ -9,21 +11,30 @@ import Navbar from '../../components/Navbar';
 import Review from '../../components/Review';
 import Slide from '../../components/Slide';
 import Start from '../../components/Start';
+import MobNav from '../../ui/MobNav';
 
 const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className=" h-[100%] min-h-screen  ">
-      <Navbar />
-      <Hero />
-      <Company />
-      <Slide />
-      <Start />
-      <Leadbot />
-      <MoreLeads />
-      <Advice />
-      <Review />
-      <CallToAction />
-      <Footer />
+      <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      {isMenuOpen ? (
+        <MobNav />
+      ) : (
+        <>
+          <Hero />
+          <Company />
+          <Slide />
+          <Start />
+          <Leadbot />
+          <MoreLeads />
+          <Advice />
+          <Review />
+          <CallToAction />
+          <Footer />
+        </>
+      )}
     </div>
   );
 };

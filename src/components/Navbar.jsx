@@ -1,17 +1,19 @@
+/* eslint-disable react/prop-types */
+
 import FutyLogo from '../assets/image/futyLogo.svg';
 
 import MenuEnterIcon from '../ui/MenuEnter';
 
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
-import { IoIosArrowUp } from 'react-icons/io';
+
+import { IoIosArrowForward } from 'react-icons/io';
 
 import { useState } from 'react';
 import MenuExit from '../ui/MenuExit';
 
-function NavCopy() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+function NavCopy({ setIsMenuOpen, isMenuOpen }) {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isBlogOpen, setIsBlogOpen] = useState(false);
 
   return (
     <>
@@ -27,7 +29,7 @@ function NavCopy() {
 
             <div className="  flex items-center  justify-between md:flex md:min-h-[4.375rem] md:shrink-0 md:grow md:items-stretch ">
               <div className=" hidden flex-col md:mr-auto md:flex md:flex-row md:items-stretch md:justify-start ">
-                <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300	ease-in hover:text-[#5f77ff] md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
+                <a className=" active md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300	ease-in hover:text-[#5f77ff] active:text-[#5f77ff] md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
                   Home
                 </a>
                 <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in	hover:text-[#5f77ff] md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
@@ -42,21 +44,26 @@ function NavCopy() {
                   onMouseLeave={() => setIsSolutionsOpen(false)}
                   className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in 	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  "
                 >
-                  <div className="flex cursor-pointer ">
-                    <span className="hover:text-[#5f77ff]">Solutions</span>
-                    <span className="flex items-center">
+                  <div className="flex cursor-pointer hover:text-[#5f77ff] ">
+                    <span>Solutions</span>
+                    <span className="flex items-center text-xl">
                       <MdOutlineKeyboardArrowDown />
                     </span>
-                    {isSolutionsOpen && <NavDropDown />}
+                    {isSolutionsOpen && <NavDropDownSolutions />}
                   </div>
                 </div>
 
-                <div className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  ">
+                <div
+                  onMouseEnter={() => setIsBlogOpen(true)}
+                  onMouseLeave={() => setIsBlogOpen(false)}
+                  className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  "
+                >
                   <div className="flex cursor-pointer ">
                     Blog
-                    <span className="flex items-center">
+                    <span className="flex items-center text-xl">
                       <MdOutlineKeyboardArrowDown />
                     </span>
+                    {isBlogOpen && <NavDropDownBlog />}
                   </div>
                 </div>
               </div>
@@ -76,7 +83,6 @@ function NavCopy() {
                 <span onClick={() => setIsMenuOpen(!isMenuOpen)}>
                   {isMenuOpen ? <MenuExit /> : <MenuEnterIcon />}
                 </span>
-                {isMenuOpen && <MobNav />}
               </div>
             </div>
           </div>
@@ -87,92 +93,14 @@ function NavCopy() {
 }
 export default NavCopy;
 
-const MobNav = () => {
-  const [isPriceOpen, setIsPriceOpen] = useState(false);
-
-  const handlePrice = (e) => {
-    e.preventDefault();
-    setIsPriceOpen(!isPriceOpen);
-  };
-
-  return (
-    <div className=" absolute left-0 top-[4.375rem] flex h-screen w-full flex-row bg-white">
-      <div className=" z-20 w-full pl-3 pt-2 leading-normal	 ">
-        <ul className="gap-2">
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">Product</a>
-          </li>
-          <li onClick={handlePrice}>
-            <span className="flex w-full flex-row justify-between ">
-              <a href="">Price</a>
-              <span className="flex items-center pr-6 text-4xl ">
-                {isPriceOpen ? (
-                  <MdOutlineKeyboardArrowDown />
-                ) : (
-                  <IoIosArrowUp />
-                )}
-              </span>
-            </span>
-            {isPriceOpen && (
-              <>
-                <ul className="pl-3 text-xl">
-                  <li className="font-semibold">INDUSTRIES</li>
-                  <ul className="pl-3 text-lg ">
-                    <li className="hover:text-[#5f77ff]">
-                      <a href="">Automotive</a>
-                    </li>
-                    <li className="hover:text-[#5f77ff]">
-                      <a href="">B2B / Industry</a>
-                    </li>
-                  </ul>
-                </ul>
-
-                <ul className="pl-3 text-xl">
-                  <li className="font-semibold">INDUSTRIES</li>
-                  <ul className="pl-3 text-lg">
-                    <li className="hover:text-[#5f77ff]">
-                      <a href="">Automotive</a>
-                    </li>
-                    <li className="hover:text-[#5f77ff]">
-                      <a href="">B2B / Industry</a>
-                    </li>
-                  </ul>
-                </ul>
-              </>
-            )}
-          </li>
-          <li></li>
-          <li>
-            <a href="">Blog</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div className="absolute  bottom-16 left-0 z-30 flex w-full justify-between bg-white px-8 py-8 ">
-          <a className="relative mb-2 mr-2  h-[2.857em] cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-white px-[5em] py-1.5 text-center align-top	text-[.875rem] font-semibold	leading-normal text-[#5f77ff] hover:bg-[#5f77ff] hover:text-white md:inline-flex ">
-            <span className="text-[1rem]"> login</span>
-          </a>
-          <a className="relative mb-2 mr-2 inline-flex h-[2.857em] cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-[#5f77ff] px-[4em] py-3 text-center align-top	text-[.875rem] 	font-semibold leading-normal text-white hover:bg-[#566add] hover:text-white ">
-            <span className="text-[1rem]"> Start for free →</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-import { IoIosArrowForward } from 'react-icons/io';
-
-const NavDropDown = () => {
+const NavDropDownSolutions = () => {
   return (
     <>
-      <div className=" absolute left-12 top-[75px]  h-5 w-5 rotate-45 bg-gray-100 shadow"></div>
+      <div className=" absolute left-12 top-[73px] z-[21] block overflow-hidden border-x-[11px] border-b-[13px] border-white   border-x-transparent  "></div>
+
       <div
         className="
-      solutionShadow absolute top-[80px] flex rounded-[16px] border bg-white p-7
+      solutionShadow absolute top-[85px] z-20 flex  rounded-[16px] border bg-white p-7
       "
       >
         <div className=" mt-0 min-w-[200px] pl-0 ">
@@ -248,6 +176,118 @@ const NavDropDown = () => {
             <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff] ">
               <a className="flex items-center justify-start font-bold text-[#5f77ff] ">
                 <font className="hover:underline ">More templates</font>
+                <span>
+                  <IoIosArrowForward className="font-extrabold" />
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const NavDropDownBlog = () => {
+  return (
+    <>
+      <div className=" absolute left-12 top-[73px] z-[21] block overflow-hidden border-x-[11px] border-b-[13px] border-white   border-x-transparent  "></div>
+
+      <div
+        className="
+      solutionShadow absolute top-[85px] z-20 flex  rounded-[16px] border bg-white p-7
+      "
+      >
+        <div className=" mt-0 min-w-[200px] pl-0 ">
+          <h3 className=" mb-[1rem] cursor-text text-[1rem] font-bold text-[#292940]  ">
+            BLOG
+          </h3>
+
+          <ul className=" pt-3">
+            <li className=" block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              WhatsApp Business
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Conversion optimization
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Installation manuals
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Use cases
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Help center
+            </li>
+
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff] ">
+              <a className="flex items-center justify-start font-bold text-[#5f77ff] ">
+                <font className="hover:underline ">More Blogs</font>
+                <span>
+                  <IoIosArrowForward className="font-extrabold" />
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className=" mt-0 min-w-[200px] pl-0 ">
+          <h3 className=" mb-[1rem] cursor-text text-[1rem] font-bold text-[#292940]  ">
+            INTEGRATIONS
+          </h3>
+
+          <ul className=" pt-3">
+            <li className=" block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Calendly
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Google Ads
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Google Sheets
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Google Analytics
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              WhatsApp Business
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff] ">
+              <a className="flex items-center justify-start font-bold text-[#5f77ff] ">
+                <font className="hover:underline ">More integrations</font>
+                <span>
+                  <IoIosArrowForward className="font-extrabold" />
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className=" mt-0 min-w-[200px] pl-0 ">
+          <h3 className=" mb-[1rem] cursor-text text-[1rem] font-bold text-[#292940]  ">
+            INSTALLATION
+          </h3>
+
+          <ul className=" pt-3">
+            <li className=" block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              WordPress
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Shopify
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Lightspeed
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              YourWeb
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Google Tag Manager
+            </li>
+
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff] ">
+              <a className="flex items-center justify-start font-bold text-[#5f77ff] ">
+                <font className="hover:underline ">More guides</font>
                 <span>
                   <IoIosArrowForward className="font-extrabold" />
                 </span>
