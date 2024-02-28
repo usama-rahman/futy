@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-
 import FutyLogo from '../assets/image/futyLogo.svg';
 
 import MenuEnterIcon from '../ui/MenuEnter';
@@ -20,22 +17,16 @@ function NavCopy() {
     <>
       <header className="block min-h-[4.375rem]">
         {/* navbar */}
-        <div className="  left-0 right-0 top-0 z-30 flex items-stretch bg-white shadow-sm md:min-h-[4.375rem] md:px-[1.5rem]  fixed">
-         
+        <div className="  fixed left-0 right-0 top-0 z-30 flex items-stretch bg-white shadow-sm md:min-h-[4.375rem]  md:px-[1.5rem]">
           <div className="relative mx-auto my-0 flex h-[100%] min-h-[4.375rem] w-auto grow items-stretch justify-between md:flex md:max-w-[1152px] ">
-          
-
             <div className="ml-4 flex min-h-[4.375rem] shrink-0  items-center text-xl font-semibold md:mr-8 ">
               <a className="flex items-center md:py-2 md:pl-0 md:pr-3">
                 <img src={FutyLogo} alt="FutyLogo" className="" />
               </a>
             </div>
 
-           
             <div className="  flex items-center  justify-between md:flex md:min-h-[4.375rem] md:shrink-0 md:grow md:items-stretch ">
-              
               <div className=" hidden flex-col md:mr-auto md:flex md:flex-row md:items-stretch md:justify-start ">
-               
                 <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300	ease-in hover:text-[#5f77ff] md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
                   Home
                 </a>
@@ -45,13 +36,12 @@ function NavCopy() {
                 <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
                   Home
                 </a>
-                
+
                 <div
                   onMouseEnter={() => setIsSolutionsOpen(true)}
                   onMouseLeave={() => setIsSolutionsOpen(false)}
                   className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in 	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  "
                 >
-              
                   <div className="flex cursor-pointer ">
                     <span className="hover:text-[#5f77ff]">Solutions</span>
                     <span className="flex items-center">
@@ -62,19 +52,16 @@ function NavCopy() {
                 </div>
 
                 <div className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940]  ">
-                
                   <div className="flex cursor-pointer ">
                     Blog
                     <span className="flex items-center">
                       <MdOutlineKeyboardArrowDown />
                     </span>
                   </div>
-                  
                 </div>
               </div>
-             
+
               <div className="md:flex-end md:ml-auto md:flex md:items-stretch">
-               
                 <div className="flex flex-1 items-center justify-end px-3 py-2 md:flex-wrap md:justify-start ">
                   <a className="relative mb-2 mr-2 hidden h-[2.857em] cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-white px-[1.125em] py-1.5 text-center align-top	text-[.875rem] font-semibold	leading-normal text-[#5f77ff] hover:bg-[#5f77ff] hover:text-white md:inline-flex ">
                     login

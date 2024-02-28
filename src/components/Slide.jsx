@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState } from 'react';
 
 import RightSlide from '../assets/image/right.svg';
 import LeftSlide from '../assets/image/left.svg';
@@ -146,4 +145,3 @@ function Slide() {
   );
 }
 export default Slide;
-
