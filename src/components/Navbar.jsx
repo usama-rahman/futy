@@ -34,7 +34,7 @@ function NavCopy() {
                   Product
                 </a>
                 <a className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] ">
-                  Home
+                  Prices
                 </a>
 
                 <div
@@ -164,39 +164,95 @@ const MobNav = () => {
   );
 };
 
+import { IoIosArrowForward } from 'react-icons/io';
+
 const NavDropDown = () => {
   return (
     <>
       <div className=" absolute left-12 top-[75px]  h-5 w-5 rotate-45 bg-gray-100 shadow"></div>
-      <div className="absolute top-[80px] flex gap-10 rounded-lg  bg-white px-6 py-5 drop-shadow-2xl ">
-        <div className="px-5">
-          <h3 className="text-xl">INDUSTRIES</h3>
+      <div
+        className="
+      solutionShadow absolute top-[80px] flex rounded-[16px] border bg-white p-7
+      "
+      >
+        <div className=" mt-0 min-w-[200px] pl-0 ">
+          <h3 className=" mb-[1rem] cursor-text text-[1rem] font-bold text-[#292940]  ">
+            INDUSTRIES
+          </h3>
+
           <ul className=" pt-3">
-            <li className="py-1 hover:text-[#5f77ff]">Automotive</li>
-            <li className="py-1 hover:text-[#5f77ff]">B2B / Industry</li>
-            <li className="py-1 hover:text-[#5f77ff]">Entertainment</li>
-            <li className="py-1 hover:text-[#5f77ff]">Legal services</li>
-            <li className="py-1 hover:text-[#5f77ff]">Brokerage</li>
+            <li className=" block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Automotive
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              B2B / Industry
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Entertainment
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Legal services
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Brokerage
+            </li>
           </ul>
         </div>
-        <div className="px-5">
-          <h3 className="text-xl">INDUSTRIES</h3>
+
+        <div className=" mt-0 min-w-[200px] pl-0 ">
+          <h3 className=" mb-[1rem] cursor-text text-[1rem] font-bold text-[#292940]  ">
+            INDUSTRIES
+          </h3>
+
           <ul className=" pt-3">
-            <li className="py-1 hover:text-[#5f77ff]">Automotive</li>
-            <li className="py-1 hover:text-[#5f77ff]">B2B / Industry</li>
-            <li className="py-1 hover:text-[#5f77ff]">Entertainment</li>
-            <li className="py-1 hover:text-[#5f77ff]">Legal services</li>
-            <li className="py-1 hover:text-[#5f77ff]">Brokerage</li>
+            <li className=" block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Marketing
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Personal
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Recruitment
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Retail / E-commerce
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Software / SaaS
+            </li>
           </ul>
         </div>
-        <div className="px-5">
-          <h3 className="text-xl">INDUSTRIES</h3>
+
+        <div className=" mt-0 min-w-[200px] pl-0 ">
+          <h3 className=" mb-[1rem] cursor-text text-[1rem] font-bold text-[#292940]  ">
+            TEMPLATES
+          </h3>
+
           <ul className=" pt-3">
-            <li className="py-1">Automotive</li>
-            <li className="py-1">B2B / Industry</li>
-            <li className="py-1">Entertainment</li>
-            <li className="py-1">Legal services</li>
-            <li className="py-1">Brokerage</li>
+            <li className=" block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Leadbot
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              WhatsApp Widget
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Contact Leadbot
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              Video Leadbot
+            </li>
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff]">
+              WhatsApp form
+            </li>
+
+            <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff] ">
+              <a className="flex items-center justify-start font-bold text-[#5f77ff] ">
+                <font className="hover:underline ">More templates</font>
+                <span>
+                  <IoIosArrowForward className="font-extrabold" />
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
