@@ -30,7 +30,7 @@ const MobNav = () => {
           </li>
 
           <li className=" relative px-5 py-2 text-[1.5rem] font-semibold text-[#292940] ">
-            <Link to="price">Price</Link>
+            <Link to="/pricing">Price</Link>
           </li>
 
           <li

@@ -366,9 +366,9 @@ function Pricing() {
 
           <div className="  relative  my-4 rounded-[20px] border-2  border-[#5f77ff] shadow-[0_25px_50px_-12px_rgba(41,41,64,.15)]  ">
             <div className="absolute top-[-10px] z-10 flex w-full justify-center ">
-              <spna className="   rounded-full  bg-[#5f77ff] px-2 py-0.5 text-center text-[.875rem] font-bold text-white  ">
+              <span className="   rounded-full  bg-[#5f77ff] px-2 py-0.5 text-center text-[.875rem] font-bold text-white  ">
                 Most chosen
-              </spna>
+              </span>
             </div>
 
             <div className="  p-8 py-8 md:p-[1.5rem] ">

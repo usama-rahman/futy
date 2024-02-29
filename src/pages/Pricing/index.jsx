@@ -13,7 +13,7 @@ import Review from '../../components/Review';
 import Slide from '../../components/Slide';
 import Start from '../../components/Start';
 import MobNav from '../../ui/MobNav';
-import Pricing from '../../components/Pricing';
+import Pricing from '../../components/Price';
 
 function PricePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

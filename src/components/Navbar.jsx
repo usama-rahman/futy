@@ -43,7 +43,7 @@ function NavCopy({ setIsMenuOpen, isMenuOpen }) {
                   Product
                 </a>
                 <Link
-                  to="price"
+                  to="/pricing"
                   className=" md:py-0.75rem py-0.5rem relative shrink-0 grow-0 cursor-pointer px-[1.25rem] text-[1.5rem] font-semibold leading-tight text-[#292940] transition duration-300 ease-in hover:text-[#5f77ff]	md:mr-3 md:flex md:items-center md:px-[0.5rem] md:text-[1rem] md:text-[#292940] "
                 >
                   Prices
