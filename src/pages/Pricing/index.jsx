@@ -1,19 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 
-import Advice from '../../components/Advice';
-import CallToAction from '../../components/CallToAction';
-import Company from '../../components/Company';
-import Footer from '../../components/Footer';
-import Hero from '../../components/Hero';
-import Leadbot from '../../components/Leadbot';
-import MoreLeads from '../../components/MoreLeads';
 import Navbar from '../../components/Navbar';
-import Review from '../../components/Review';
-import Slide from '../../components/Slide';
-import Start from '../../components/Start';
 import MobNav from '../../ui/MobNav';
 import Pricing from '../../components/Price';
+import Consultation from '../../components/Consultation';
+import Faq from '../../components/Faq';
+import CallToAction from '../../components/CallToAction';
+import Footer from '../../components/Footer';
 
 function PricePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,6 +20,10 @@ function PricePage() {
       ) : (
         <>
           <Pricing />
+          <Consultation />
+          <Faq />
+          <CallToAction />
+          <Footer />
         </>
       )}
     </div>
