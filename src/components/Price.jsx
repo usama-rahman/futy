@@ -21,6 +21,14 @@ function Pricing() {
   const [isHideStarter, setIsHideStarter] = useState(true);
   const [isHideBusiness, setIsHideBusiness] = useState(true);
 
+  let price;
+
+  // const pricingTag = () => {
+  //   if (isPricingMonthly) {
+  //     return (price = '€17.50');
+  //   }
+  // };
+
   return (
     <section className="block px-6 py-12 ">
       {/* Title */}
@@ -215,7 +223,9 @@ function Pricing() {
 
               <div className=" mt-2 flex items-center ">
                 <div className=" text-[2.25rem] font-bold text-[#292940] ">
-                  €12.50
+                  {isPricingMonthly && '€17.50'}
+                  {isPricingQuarterly && '€14.50'}
+                  {isPricingAnnual && '€12.50'}
                 </div>
 
                 <div className=" ml-2 text-[#b4b4c5] ">/ month</div>
@@ -376,7 +386,9 @@ function Pricing() {
 
               <div className=" mt-2 flex items-center ">
                 <div className=" text-[2.25rem] font-bold text-[#292940] ">
-                  €25
+                  {isPricingMonthly && '€35'}
+                  {isPricingQuarterly && '€29'}
+                  {isPricingAnnual && '€25'}
                 </div>
 
                 <div className=" ml-2 text-[#b4b4c5] ">/ month</div>
@@ -423,7 +435,9 @@ function Pricing() {
 
               <div className=" mt-2 flex items-center ">
                 <div className=" text-[2.25rem] font-bold text-[#292940] ">
-                  €45
+                  {isPricingMonthly && '€55'}
+                  {isPricingQuarterly && '€49'}
+                  {isPricingAnnual && '€45'}
                 </div>
 
                 <div className=" ml-2 text-[#b4b4c5] ">/ month</div>
@@ -437,7 +451,7 @@ function Pricing() {
 
               <div className="mt-4">
                 <button className="relative mb-2 mr-2  h-[2.857em] w-full cursor-pointer items-center justify-center text-nowrap rounded-[4px] border border-[#5f77ff] bg-white px-[1.125em] py-1.5 text-center align-top	 text-[.875rem]	font-bold leading-normal text-[#5f77ff] hover:bg-[#5f77ff] hover:text-white md:inline-flex ">
-                  create an account
+                  Try it for free
                 </button>
               </div>
 
