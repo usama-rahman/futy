@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 import MobNav from '../../ui/MobNav';
 import BlogFeture from '../../components/BlogFeture';
 import BlogList from '../../components/BlogList';
+import Footer from '../../components/Footer';
 
 function BlogPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +19,7 @@ function BlogPage() {
         <>
           <BlogFeture />
           <BlogList />
+          <Footer />
         </>
       )}
     </div>

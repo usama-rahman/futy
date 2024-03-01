@@ -231,12 +231,15 @@ const NavDropDownBlog = () => {
             </li>
 
             <li className="block whitespace-nowrap py-[0.375rem]  pl-0 pr-[1.5rem] text-[1rem] font-medium	 text-[#575778] hover:text-[#5f77ff] ">
-              <a className="flex items-center justify-start font-bold text-[#5f77ff] ">
+              <Link
+                to="/blog"
+                className="flex items-center justify-start font-bold text-[#5f77ff] "
+              >
                 <font className="hover:underline ">More Blogs</font>
                 <span>
                   <IoIosArrowForward className="font-extrabold" />
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
