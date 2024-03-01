@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <BlogPage />,
   },
   {
-    path: '/blog/vast-telefoonnummer-koppelen-whatsapp',
+    path: '/blog/offerte-formulier-website',
     element: <BlogPost />,
   },
 ]);

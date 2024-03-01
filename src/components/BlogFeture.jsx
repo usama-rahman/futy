@@ -40,7 +40,7 @@ function BlogFeture() {
 
             <div className="mb-[-.5rem] flex flex-wrap items-center justify-start font-semibold text-[#5f77ff]  ">
               <Link
-                to="/blog/vast-telefoonnummer-koppelen-whatsapp"
+                to="/blog/offerte-formulier-website"
                 className=" flex hover:underline"
               >
                 Read further
