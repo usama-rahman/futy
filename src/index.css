@@ -61,6 +61,12 @@
   margin-bottom: 2rem;
 }
 
+.BlogHeadingTitle {
+  background-position:
+    left 5% top 0,
+    right 0 bottom -350px;
+}
+
 @media only screen and (min-width: 769px) {
   .slideGrid {
     grid-template-areas:
