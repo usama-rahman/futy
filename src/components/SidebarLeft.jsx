@@ -1,6 +1,6 @@
 function SidebarLeft() {
   return (
-    <aside className=" leftSideBar flex h-full items-center  pr-[1.5rem] pt-[1.5rem]  ">
+    <aside className=" leftSideBar hidden h-full items-center pr-[1.5rem]  pt-[1.5rem] md:flex  ">
       <nav className="sticky top-20 pt-4 ">
         <div className=" mt-6 ">
           <p className=" text-[.8125rem] font-semibold text-[#292940] ">

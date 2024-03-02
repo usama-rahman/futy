@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import Pricing from './pages/Pricing/index';
 import BlogPage from './pages/Blog';
 import BlogPost from './pages/Blog/post/vast-telefoonnummer-koppelen-whatsapp';
+import LoginPage from './pages/Login';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: '/blog/offerte-formulier-website',
     element: <BlogPost />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
+  },
+  {
+    path: '/register',
+    element: <Register />,
   },
 ]);
 

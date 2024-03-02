@@ -1,6 +1,6 @@
 function MainBlogPost() {
   return (
-    <div className=" mainArticle mb-16 rounded-xl bg-white pt-16 shadow-[0_2px_5px_0_rgba(67,67,113,.07)] md:px-12 md:pb-12 ">
+    <div className=" mainArticle mb-16 rounded-xl bg-white px-3 pt-16 shadow-[0_2px_5px_0_rgba(67,67,113,.07)] md:px-12 md:pb-12 ">
       <strong className="mb-8 text-[1.125rem] font-bold text-[#575778] ">
         What is the best way to let visitors request a quote via your website? A
         good quotation form is important for this. With Futy&apos;s Leadbots you
@@ -73,6 +73,54 @@ function MainBlogPost() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className=" relative mt-8 pb-6 ">
+          <h3 className=" font-blod mb-6 text-[1.75rem] ">
+            Which 14 fields can you use in the quotation form on your website?
+          </h3>
+
+          <div>
+            <p className=" mb-4 text-[1.125rem] text-[#575778] ">
+              <strong>1. Name field: </strong>
+              <br />
+              <p className="mt-2 ">
+                This is a name field. This is also used in the confirmation
+                email of the quote request.
+              </p>
+            </p>
+          </div>
+
+          <div>
+            <p className=" mb-4 text-[1.125rem] text-[#575778] ">
+              <strong>2. E-mail field: </strong>
+              <br />
+              <p className="mt-2 ">
+                This is a field that checks whether it is an e-mail address.
+              </p>
+            </p>
+          </div>
+
+          <div>
+            <p className=" mb-4 text-[1.125rem] text-[#575778] ">
+              <strong>3. Phone field:</strong>
+              <br />
+              <p className="mt-2 ">
+                This is a field that checks whether it is a telephone number.
+              </p>
+            </p>
+          </div>
+
+          <div>
+            <p className=" mb-4 text-[1.125rem] text-[#575778] ">
+              <strong>4. Message field:</strong>
+              <br />
+              <p className="mt-2 ">
+                This is a large text field. This allows you to add additional
+                information to the quote request.
+              </p>
+            </p>
           </div>
         </section>
       </div>

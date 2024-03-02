@@ -18,7 +18,7 @@ const BlogPost = () => {
         <>
           <BlogHeading />
           <SingleBlogPost />
-          {/* <Footer /> */}
+          <Footer />
         </>
       )}
     </div>
